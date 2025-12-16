@@ -1,0 +1,28 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.375rem 0.875rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.pass {
+  background: rgba(31, 210, 142, 0.1);
+  color: #0F8A5F;
+  border: 1px solid rgba(31, 210, 142, 0.3);
+}
+
+.warn {
+  background: rgba(255, 159, 67, 0.1);
+  color: #C67A2F;
+  border: 1px solid rgba(255, 159, 67, 0.3);
+}
+
+.fail {
+  background: rgba(240, 82, 82, 0.1);
+  color: #C73E3E;
+  border: 1px solid rgba(240, 82, 82, 0.3);
+}
