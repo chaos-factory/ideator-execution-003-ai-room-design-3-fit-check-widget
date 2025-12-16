@@ -1,0 +1,113 @@
+.section {
+  padding: var(--spacing-section-mobile) 0;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: var(--spacing-section-tablet) 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: var(--spacing-section-desktop) 0;
+  }
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionLabel {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.sectionHeader h2 {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.cardIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  color: var(--color-slate);
+  margin: 0;
+}
+
+.stepsGrid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .stepsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .stepsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.step {
+  text-align: center;
+}
+
+.stepNum {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-navy);
+  font-size: 1.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.step h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+}
+
+.step p {
+  color: var(--color-slate);
+  font-size: 0.9375rem;
+  margin: 0;
+}

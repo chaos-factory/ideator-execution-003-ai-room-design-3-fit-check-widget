@@ -1,0 +1,94 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 27, 45, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal {
+  background: var(--color-white);
+  border-radius: var(--radius-card);
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(15, 27, 45, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--color-gray-50);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-navy);
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.closeButton:hover {
+  background: var(--color-slate);
+  color: var(--color-white);
+}
+
+.title {
+  padding: 2rem 2rem 1rem;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.content {
+  padding: 0 2rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    max-width: 800px;
+  }
+  
+  .title {
+    padding: 2.5rem 2.5rem 1.5rem;
+    font-size: 2rem;
+  }
+  
+  .content {
+    padding: 0 2.5rem 2.5rem;
+  }
+}

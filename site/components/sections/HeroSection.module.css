@@ -1,0 +1,243 @@
+.hero {
+  padding: var(--spacing-section-mobile) 0;
+  background: linear-gradient(180deg, var(--color-gray-50) 0%, var(--color-white) 100%);
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: var(--spacing-section-tablet) 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding: var(--spacing-section-desktop) 0;
+  }
+}
+
+.content {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .content {
+    grid-template-columns: 60% 40%;
+    gap: 4rem;
+  }
+}
+
+.title {
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--color-slate);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .ctas {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.trustBand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .trustBand {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  color: var(--color-navy);
+}
+
+.icon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.microCopy {
+  font-size: 0.9375rem;
+  color: var(--color-slate);
+  font-style: italic;
+}
+
+.visualComposite {
+  position: relative;
+  min-height: 400px;
+}
+
+.layer1, .layer2, .layer3 {
+  position: absolute;
+}
+
+.layer1 {
+  top: 0;
+  left: 0;
+  width: 80%;
+  z-index: 1;
+}
+
+.layer2 {
+  bottom: 20px;
+  right: 0;
+  width: 45%;
+  z-index: 3;
+}
+
+.layer3 {
+  top: 60%;
+  left: 5%;
+  width: 35%;
+  z-index: 2;
+}
+
+.pdpMockup {
+  background: var(--color-white);
+  border-radius: var(--radius-card);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid #E5E7EB;
+}
+
+.mockupContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.productImage {
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(135deg, #E5E7EB 0%, #D1D5DB 100%);
+  border-radius: 8px;
+}
+
+.mockupContent h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin: 0;
+}
+
+.dims {
+  font-size: 0.875rem;
+  color: var(--color-slate);
+  margin: 0;
+}
+
+.checkFitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--color-accent);
+  color: var(--color-navy);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-button);
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.phoneMockup {
+  background: var(--color-white);
+  border-radius: 1.5rem;
+  padding: 1rem;
+  box-shadow: 0 8px 24px rgba(15, 27, 45, 0.15);
+  border: 3px solid #1F1F1F;
+}
+
+.resultCard {
+  background: var(--color-gray-50);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.passChip {
+  background: rgba(31, 210, 142, 0.15);
+  color: #0F8A5F;
+  padding: 0.375rem 0.875rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.resultText {
+  font-size: 0.875rem;
+  margin: 0.5rem 0;
+  color: var(--color-navy);
+  font-weight: 600;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(135deg, #D1D5DB 0%, #9CA3AF 100%);
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+.fitPassPreview {
+  background: var(--color-white);
+  border-radius: 8px;
+  padding: 0.75rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid #E5E7EB;
+  position: relative;
+}
+
+.fitPassHeader {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.fitPassBadge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--color-accent);
+  color: var(--color-navy);
+  font-size: 0.625rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+}

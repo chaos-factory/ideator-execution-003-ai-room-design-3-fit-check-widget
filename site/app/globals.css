@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+/* Design Tokens */
+:root {
+  /* Colors */
+  --color-navy: #0F1B2D;
+  --color-accent: #1FD28E;
+  --color-orange: #FF9F43;
+  --color-red: #F05252;
+  --color-slate: #6B7A90;
+  --color-gray-50: #F4F6FA;
+  --color-white: #FFFFFF;
+  
+  /* Typography */
+  --font-heading: 'Inter', 'Work Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Font Sizes */
+  --font-size-h1-desktop: 3.5rem; /* 56px */
+  --font-size-h1-mobile: 2.5rem; /* 40px */
+  --font-size-h2-desktop: 2.25rem; /* 36px */
+  --font-size-h2-mobile: 1.75rem; /* 28px */
+  --font-size-h3-desktop: 1.75rem; /* 28px */
+  --font-size-h3-mobile: 1.375rem; /* 22px */
+  --font-size-body: 1.125rem; /* 18px */
+  --font-size-button: 1rem; /* 16px */
+  
+  /* Line Heights */
+  --line-height-heading: 1.2;
+  --line-height-body: 1.6;
+  
+  /* Spacing */
+  --spacing-section-desktop: 6rem; /* 96px */
+  --spacing-section-tablet: 4rem; /* 64px */
+  --spacing-section-mobile: 3rem; /* 48px */
+  
+  /* Border Radius */
+  --radius-button: 0.75rem; /* 12px */
+  --radius-card: 1rem; /* 16px */
+  
+  /* Shadows */
+  --shadow-button: 0 2px 8px rgba(15, 27, 45, 0.1);
+  --shadow-card: 0 4px 16px rgba(15, 27, 45, 0.08);
+  --shadow-header: 0 2px 8px rgba(15, 27, 45, 0.04);
+  
+  /* Max Width */
+  --max-width-content: 1280px;
+}
+
+@theme inline {
+  --font-sans: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-white);
+  color: var(--color-slate);
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-navy);
+  line-height: var(--line-height-heading);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: var(--font-size-h1-mobile);
+}
+
+h2 {
+  font-size: var(--font-size-h2-mobile);
+}
+
+h3 {
+  font-size: var(--font-size-h3-mobile);
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: var(--font-size-h1-desktop);
+  }
+  
+  h2 {
+    font-size: var(--font-size-h2-desktop);
+  }
+  
+  h3 {
+    font-size: var(--font-size-h3-desktop);
+  }
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--max-width-content);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Focus Styles */
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
